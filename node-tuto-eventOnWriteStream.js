@@ -10,6 +10,7 @@ if (Meteor.isServer) {
     var counter = {open:0, drain:0, close:0, data:0, end:0, finish:0, error:0},
         url = 'http://www.google.fr/logos/doodles/2013/leonidas_da_silvas_100th_birthday-2024005-hp.jpg',
         filename = './testFile~',
+	request = Meteor.require('request'),
         fs = Npm.require('fs'),
         writeStream = fs.createWriteStream(filename);
 
